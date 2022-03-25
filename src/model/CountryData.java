@@ -93,18 +93,18 @@ public class CountryData {
 					p = countryData.get(j - 1);
 					countryData.set(j - 1, countryData.get(j));
 					countryData.set(j, p);
-					}else if (countryData.get(j).getTotalOro() == countryData.get(j - 1).getTotalOro()) {
-						if(countryData.get(j).getTotalPlata() > countryData.get(j - 1).getTotalPlata()) {
+				} else if (countryData.get(j).getTotalOro() == countryData.get(j - 1).getTotalOro()) {
+					if (countryData.get(j).getTotalPlata() > countryData.get(j - 1).getTotalPlata()) {
+						p = countryData.get(j - 1);
+						countryData.set(j - 1, countryData.get(j));
+						countryData.set(j, p);
+					} else if (countryData.get(j).getTotalPlata() == countryData.get(j - 1).getTotalPlata()) {
+						if (countryData.get(j).getTotalBronce() > countryData.get(j - 1).getTotalBronce()) {
 							p = countryData.get(j - 1);
 							countryData.set(j - 1, countryData.get(j));
 							countryData.set(j, p);
-						}else if(countryData.get(j).getTotalPlata() == countryData.get(j - 1).getTotalPlata()) {
-							if(countryData.get(j).getTotalBronce() > countryData.get(j - 1).getTotalBronce()) {
-								p = countryData.get(j - 1);
-								countryData.set(j - 1, countryData.get(j));
-								countryData.set(j, p);
-							}
 						}
+					}
 				}
 			}
 		}
@@ -116,18 +116,4 @@ public class CountryData {
 		}
 	}
 
-	
-	/*
-	 * else if (countryData.get(j).getTotalPlata() > countryData.get(j - 1).getTotalPlata()) {
-						if (countryData.get(j).getTotalPlata() == countryData.get(j - 1).getTotalPlata()) {
-							p = countryData.get(j - 1);
-							countryData.set(j - 1, countryData.get(j));
-							countryData.set(j, p);
-						}else if(countryData.get(j).getTotalBronce() > countryData.get(j - 1).getTotalBronce()) {
-							if(countryData.get(j).getTotalBronce() == countryData.get(j - 1).getTotalBronce()) {
-								p = countryData.get(j - 1);
-								countryData.set(j - 1, countryData.get(j));
-								countryData.set(j, p);
-							} 
-	 */
 }
