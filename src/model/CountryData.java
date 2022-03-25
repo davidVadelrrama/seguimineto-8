@@ -56,7 +56,7 @@ public class CountryData {
 			System.out.println(
 					pais.getNombre() + " " + pais.getOroFem() + " " + pais.getPlataFem() + " " + pais.getBronceFem());
 		}
-		System.out.println("----------");
+		System.out.println("\n----------\n");
 
 	}
 
@@ -81,7 +81,7 @@ public class CountryData {
 			System.out.println(pais.getNombre() + " " + pais.getOroMasc() + " " + pais.getPlataMasc() + " "
 					+ pais.getBronceMasc());
 		}
-		System.out.println("----------");
+		System.out.println("\n----------\n");
 
 	}
 
